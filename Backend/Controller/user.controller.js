@@ -7,7 +7,7 @@ const JWT_SECRET = process.env.JWT_SECRET;
 exports.register = async (req, res) => {
     const { email, password, gender, name } = req.body;
     try {
-        const user = await UserModel({ email });
+        const user = await UserModel.find({ email });
         if (user.length) {
            return res.status(403).json({ Error: "User already exsisted!" })
         }
@@ -26,7 +26,7 @@ exports.register = async (req, res) => {
 exports.login = async (req, res) => {
     const { email, password } = req.body;
     try {
-        const user = await UserModel({ email })
+        const user = await UserModel.find({ email })
         if (!user.length) {
             return res.status(404).json({ message: 'Invalid Credentials' })
         }

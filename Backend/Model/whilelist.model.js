@@ -28,5 +28,5 @@ const wishlist = mongoose.Schema({
         type: String,
     }
 })
-const WishlistModel = mongoose.Model('product', wishlist);
+const WishlistModel = mongoose.model('product', wishlist);
 module.exports = WishlistModel;
