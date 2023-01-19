@@ -113,7 +113,7 @@ sup{
 }
 
 .nav_middleSection>ul>li {
-    margin: 0 25px;
+    padding: 0 25px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -122,6 +122,9 @@ sup{
 .nav_middleSection>ul>li:hover>a{
     border-bottom: 5px solid black;
     transform: translateY(3px);
+}
+.nav_middleSection>ul>li:hover>.megadropdown{
+    display: block;
 }
 
 .nav_middleSection>ul>li>a {
@@ -145,6 +148,7 @@ sup{
     left: 0px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: none;
+    /* transition-duration: 1000ms; */
 }
 .mdd-active{
     display: block;
