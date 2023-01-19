@@ -16,7 +16,7 @@ exports.addProduct = async (req,res)=>{
         newProduct.userId = req.userID;
         newProduct = new WishlistModel(req.body);
         await newProduct.save()
-        res.status(200).json({message: 'Product is added in cart'});
+        res.status(200).json({message: 'Product is added in wishlist'});
     } catch (error) {
         res.status(500).json({error: error.message});
         console.log(error)
@@ -26,7 +26,7 @@ exports.addProduct = async (req,res)=>{
 exports.deletProduct = async (req,res)=>{
     try {
         await WishlistModel.findByIdAndDelete(req.params.id)
-        res.status(200).json({message: 'Product has been removed from cart'});
+        res.status(200).json({message: 'Product has been removed from wishlist'});
     } catch (error) {
         res.status(500).json({error: error.message})
     }
