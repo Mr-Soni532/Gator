@@ -245,6 +245,16 @@ sup{
     display: flex;
     justify-content: space-between;
 }
+#mdd_s3_charms{
+    width: 100%;
+}
+#mdd_s3_charms>.mdd_s3_c1>div>img{
+    width: 65%;
+}
+#mdd_s3_charms>.mdd_s3_c2>img{
+    width: 151%;
+}
+
 .mdd_s3_c1{
     width: 70%;
 }
