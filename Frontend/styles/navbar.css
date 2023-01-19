@@ -194,6 +194,9 @@ sup{
     font-weight: 900;
     /* margin-top: 15px; */
 }
+#sale>li>a{
+    font-size: 16px;
+}
 /*! .megadropdown section 2 */
 .mdd_section2{
     width: 18%;
@@ -254,6 +257,22 @@ sup{
 #mdd_s3_charms>.mdd_s3_c2>img{
     width: 151%;
 }
+#mdd_s3_bestsellers{
+    width: 100%;
+}
+#mdd_s3_bestsellers>.mdd_s3_c1>div>img{
+    width: 70%;
+}
+#mdd_s3_bestsellers>.mdd_s3_c2>img{
+    width: 80%;
+}
+#mdd_s3_sale{
+    width: 100%;
+}
+#mdd_s3_sale>.mdd_s3_c1>div>img{
+    width: 50%;
+}
+
 
 .mdd_s3_c1{
     width: 70%;
