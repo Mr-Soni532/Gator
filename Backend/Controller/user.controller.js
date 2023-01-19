@@ -44,3 +44,14 @@ exports.login = async (req, res) => {
         console.log(error)
     }
 }
+//! Login required:
+exports.fetchUser = async (req,res)=>{
+    const ID = req.userID;
+    try {
+        const user = await UserModel.findById(ID);
+        res.send(user);
+    } catch (error) {
+        res.json({error: error.message})
+        console.log(error)
+    }
+}

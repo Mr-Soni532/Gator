@@ -1,5 +1,5 @@
+const products = require("../Config/product_data"); // data
 const ProductModel = require("../Model/product.model")
-
 exports.fetchProduct = async (req, res) => {
     let page = +req.query.page || 1;
     try {
@@ -32,7 +32,7 @@ exports.searchProduct = async (req, res) => {
 
 
 exports.addProduct = async (req, res) => {
-    const newProduct = req.body;
+    let newProduct = req.body;
     try {
         newProduct.userId = req.userID;
         newProduct = new ProductModel(req.body);
@@ -50,5 +50,16 @@ exports.deletProduct = async (req, res) => {
         res.status(200).json({ message: 'Product has been removed from cart' });
     } catch (error) {
         res.status(500).json({ error: error.message })
+    }
+}
+
+//!------- Add all product: Admin
+exports.AddAllProducts = async (req,res)=>{
+    try {
+        await ProductModel.insertMany(products)     
+        res.send('added all products from admin')  
+    } catch (error) {
+        res.status(500).send('error while adding all products')
+        console.log(error)
     }
 }
