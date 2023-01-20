@@ -1,27 +1,6 @@
-@font-face {
-    font-family: proxima_nova;
-    src: url(../resource/Proxima_Nova_Font.otf);
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    font-family: proxima_nova;
-}
-
-body {
-    background: rgb(165, 165, 165);
-}
-
-#container {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    box-sizing: border-box;
-}
-
 .footer {
     color: white;
+    margin-top: 50px;
 }
 
 .footer_top-section{
@@ -153,7 +132,6 @@ color: black;
     width: 90%;
     margin: auto;
     padding: 20px;
-
 }
 
 .footer_bottom>div:nth-child(1) {
