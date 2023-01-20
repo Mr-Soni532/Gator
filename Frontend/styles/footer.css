@@ -1,9 +1,6 @@
-
-
-
 .footer {
     color: white;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .footer_top-section{
@@ -135,7 +132,6 @@ color: black;
     width: 90%;
     margin: auto;
     padding: 20px;
-
 }
 
 .footer_bottom>div:nth-child(1) {
