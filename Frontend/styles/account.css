@@ -1,0 +1,66 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+
+.account_main{
+    width: 100%;
+}
+.account_container{
+    width: 70%;
+    margin: auto;
+}
+.account_header{
+
+} 
+
+/* ----------- welcome user */
+.account_header-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+}
+.account_header-1>div{
+    color: #172026;
+}
+.account_header-1>div>span{
+    font-weight: 700;
+}
+.account_header-1>a{
+    color: #172026;
+    font-size: 13.5px;
+}
+
+/* ---------------- navigation icons */
+.account_header-2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.account_header-2>div{
+    margin: 20px;
+    text-align: center;
+}
+.account_header-2>div>div{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #172026;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.account_header-2>div>div>img{
+    width: 60%;
+    /* background: #000; */
+    fill: red;
+}
+.account_header-2>div>span{
+    color: #172026;
+    font-size: 13px;
+}
