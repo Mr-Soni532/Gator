@@ -1,0 +1,146 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.checkout_main{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.checkout_container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+.address_form_section{
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #172026;
+}
+.address_form_section>h1{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.address_form_section>h2{
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+.address_form_section>p{
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+.address_form_section>h1>span{
+    font-weight: 900;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+form>div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+form>div>span{
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+}
+form>div>input{
+   width: 45%;
+}
+
+input{
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+input[type='submit']{
+    flex-grow: 1;
+    border: none;
+    background: #006da4;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+label{
+    font-weight: 600;
+}
+.pds_container{
+    width: 100%;
+    padding: 20px;
+    position: sticky;
+    top: 120px;
+    box-sizing: border-box;
+}
+.pds_products{
+
+}
+.pds_product_card{
+    display: flex;
+    align-items: center;
+}
+.pds_product_card>div:nth-child(1){
+    width: 15%;
+    margin-right: 20px;
+}
+.pds_product_card>div>img{
+    width: 100%;
+}
+.pds_product_card>div:nth-child(2)>h2{
+font-size: 16px;
+}
+.pds_product_card>div:nth-child(2)>p{
+font-size: 12px;
+}
+
+
+.order_summary{
+    width: 100%;
+    margin-top: 20px;
+}
+.order_summary_container{
+    width: 100%;
+    /* padding: 0 20px; */
+    position: sticky;
+    top: 130px;
+}
+.order_summary_container>h2{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.order_summary_container>div{
+    width: 100%;
+}
+.order_summary_container>div>span{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.order_summary_container>div>span:nth-child(1){
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(155, 155, 155);
+    font-weight: 600;
+}
+.order_summary_container>button{
+    background: #006da4;
+    border-color: #006da4;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 24px 9px;
+    width: 100%;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.order_summary_container>p{
+    font-size: 13px;
+}

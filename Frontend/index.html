@@ -15,14 +15,29 @@
 </head>
 
 <body>
+    <!--! please login card -->
+    <section class="login_required_card">
+        <div><i class="fa-solid fa-circle-info"></i></div>
+        <div>
+            <p>Please sign-in to your Account to save items for later.</p>
+            <div>
+                <a id="remove_login_required_card"><u>No, thanks</u></a>
+                <a href="./html/login.html">Please, sign in</a>
+            </div>
+        </div>
+        <div id="remove_login_required_card">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+    </section>
     <!-- ------------------ Header section ------------------ -->
     <section class="nav_container">
         <div class="navbar_main">
             <div class="offer_section">
                 <div class="offer_section_container">
                     <div>SIGN UP FOR 20% OFF</div>
-                    <a href="#">
-                        <span id="nav_username">Bhupender</span>
+                    <a href=".">
+                        <span id="nav_username">My Account</span>
                         <i class="fa-solid fa-user"></i>
                     </a>
                 </div>
@@ -1015,5 +1030,5 @@
         </div>
     </section>
 </body>
-
+<script src="./scripts/index.js"></script>
 </html>

@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create an Account - Crocs™ India</title>
+    <title>Cart - GATOR™ India</title>
+    <link rel="stylesheet" href="../styles/cart.css">
     <link rel="shortcut icon" href="../resource/gator_title_logo-2.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/navbar.css">
     <link rel="stylesheet" href="../styles/footer.css">
-    <link rel="stylesheet" href="../styles/signup.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/ff75adb155.js" crossorigin="anonymous"></script>
@@ -440,42 +440,166 @@
             </div>
         </div>
     </section>
-    <!-- -------------------- main ------------------------- -->
-    <section class="signup_main">
-        <div class="signup_container">
-            <div>
-                <h1>REGISTER</h1>
-            </div>
-            <p>Get the latest scoop on new arrivals, sales, special offers and receive 20% off your next purchase. <i class="fa-solid fa-circle-info"></i></p>
-            <form action="">
-                <div>
+
+    <!-- ------------------ Main section ------------------ -->
+    <section class="cart_main">
+        <div class="cart_heading">
+            <h1>Cart</h1>
+        </div>
+        <div class="cart_container">
+            <div class="cart_products">
+
+                <div class="cart_product_card">
                     <div>
-                        <label for="">First Name</label>
-                        <input type="text" id="firstname">
+                        <div class="product_img">
+                            <img src="../resource/homepage/151.jpg" alt="">
+                        </div>
+                        <div class="product_title">
+                            <h2 id="title">Classic Crush</h2>
+                            <p>Size: <span id="size">M2/W4</span></p>
+                        </div>
+                        <div class="product_quantity">
+                            <div>
+                                <i class="fa-solid fa-circle-minus"></i>
+                                <div id="quantity">
+                                    1
+                                </div>
+                                <i class="fa-solid fa-circle-plus"></i>
+                            </div>
+                        </div>
                     </div>
                     <div>
-                        <label for="">Last Name</label>
-                        <input type="text" id="lastname">
-                    </div>
-                    <div>
-                        <label for="">Mobile Number*</label>
-                        <input type="text" id="mobile">
-                    </div>
-                    <div>
-                        <label for="">Email</label>
-                        <input type="text" id="email">
-                    </div>
-                    <div>
-                        <label for="">Password</label>
-                        <input type="text" id="password">
-                    </div>
-                    <div>
-                        <label for="">Confirm Password*</label>
-                        <input type="text" id="cpassword">
+                        <div>
+                            <span>
+                                <i class="fa-regular fa-heart"></i>
+                                <a id="add_to_wishlist"><u>Move to wishlist</u></a>
+                            </span>
+                            <span>
+                                <i class="fa-solid fa-trash"></i>
+                                <a id="remove_item"><u>Remove from cart</u></a>
+                            </span>
+                        </div>
+                        <div>₹<span id="item_price">3,999.00</span></div>
                     </div>
                 </div>
-                <input type="submit" value="REGISTER">
-            </form>
+                <div class="cart_product_card">
+                    <div>
+                        <div class="product_img">
+                            <img src="../resource/homepage/151.jpg" alt="">
+                        </div>
+                        <div class="product_title">
+                            <h2 id="title">Classic Crush</h2>
+                            <p>Size: <span id="size">M2/W4</span></p>
+                        </div>
+                        <div class="product_quantity">
+                            <div>
+                                <i class="fa-solid fa-circle-minus"></i>
+                                <div id="quantity">
+                                    1
+                                </div>
+                                <i class="fa-solid fa-circle-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <span>
+                                <i class="fa-regular fa-heart"></i>
+                                <a id="add_to_wishlist"><u>Move to wishlist</u></a>
+                            </span>
+                            <span>
+                                <i class="fa-solid fa-trash"></i>
+                                <a id="remove_item"><u>Remove from cart</u></a>
+                            </span>
+                        </div>
+                        <div>₹<span id="item_price">3,999.00</span></div>
+                    </div>
+                </div>
+                <div class="cart_product_card">
+                    <div>
+                        <div class="product_img">
+                            <img src="../resource/homepage/151.jpg" alt="">
+                        </div>
+                        <div class="product_title">
+                            <h2 id="title">Classic Crush</h2>
+                            <p>Size: <span id="size">M2/W4</span></p>
+                        </div>
+                        <div class="product_quantity">
+                            <div>
+                                <i class="fa-solid fa-circle-minus"></i>
+                                <div id="quantity">
+                                    1
+                                </div>
+                                <i class="fa-solid fa-circle-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <span>
+                                <i class="fa-regular fa-heart"></i>
+                                <a id="add_to_wishlist"><u>Move to wishlist</u></a>
+                            </span>
+                            <span>
+                                <i class="fa-solid fa-trash"></i>
+                                <a id="remove_item"><u>Remove from cart</u></a>
+                            </span>
+                        </div>
+                        <div>₹<span id="item_price">3,999.00</span></div>
+                    </div>
+                </div>
+                <div class="cart_product_card">
+                    <div>
+                        <div class="product_img">
+                            <img src="../resource/homepage/151.jpg" alt="">
+                        </div>
+                        <div class="product_title">
+                            <h2 id="title">Classic Crush</h2>
+                            <p>Size: <span id="size">M2/W4</span></p>
+                        </div>
+                        <div class="product_quantity">
+                            <div>
+                                <i class="fa-solid fa-circle-minus"></i>
+                                <div id="quantity">
+                                    1
+                                </div>
+                                <i class="fa-solid fa-circle-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <span>
+                                <i class="fa-regular fa-heart"></i>
+                                <a id="add_to_wishlist"><u>Move to wishlist</u></a>
+                            </span>
+                            <span>
+                                <i class="fa-solid fa-trash"></i>
+                                <a id="remove_item"><u>Remove from cart</u></a>
+                            </span>
+                        </div>
+                        <div>₹<span id="item_price">3,999.00</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart_order_summary">
+                <div class="cart_order_summary_container">
+                    <h2>Order Summary</h2>
+                    <div>
+                        <span>
+                            <span>Subtotal</span>
+                            <span>₹<span>9999</span></span>
+                        </span>
+                        <span>
+                            <h3>Estimated Total</h3>
+                            <h3>₹<span>9999</span></h3>
+                        </span>
+                    </div>
+                    <button>PROCEED TO CHECKOUT</button>
+                    <p>Or 3 interest free payments of INR 2590.33 + 10% cashback up to INR 500 on minimum purchase of
+                        INR 2995 with simpl T&C</p>
+                </div>
+            </div>
         </div>
     </section>
 

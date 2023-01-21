@@ -33,6 +33,43 @@
     background-color: #fff;
 }
 
+/* -------------- Login required infomation card --------- */
+.login_required_card{
+    display: inline-block;
+    position: fixed;
+    z-index: 11;
+    background: white;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    display: flex;
+    padding: 20px 10px 20px 10px;
+    border-bottom: #97c24e 5px solid;
+}
+.login_required_card>div:nth-child(1){
+width: 5%;
+}
+.login_required_card>div:nth-child(2){
+    flex-grow: 1;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.login_required_card>div:nth-child(2)>p{
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.login_required_card>div:nth-child(2)>div>a{
+    font-size: 13px;
+    padding-right: 20px;
+    cursor: pointer;
+    column-rule: #172026;
+}
+.login_required_card>div:nth-child(3){
+    width: 5%;
+    cursor: pointer;
+}
+
+/* ------------------------------------ */
 sup {
     font-size: 6px;
 }
