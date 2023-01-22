@@ -14,6 +14,21 @@ async function fetchProduct(tag){
         return 'something went wrong.'
     }
 }
+async function fetchUser(){
+    let res = await fetch(`${host}/api/user/fetchuser`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+            'authorization': localStorage.getItem('token')
+        }
+    })
+    if(res.ok){
+        let data = await res.json();
+        return data;
+    } else {
+        return 'something went wrong.'
+    }
+}
 
 async function userLogin(data){
     let res = await fetch(`${host}/api/user/login`, {
@@ -44,4 +59,5 @@ async function userRegister(data){
     }
 }
 
-module.exports = {userLogin, userRegister, fetchProduct}
+export{userLogin, userRegister, fetchProduct, fetchUser}
+// export = userLogin;
