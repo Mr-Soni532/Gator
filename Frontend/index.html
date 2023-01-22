@@ -16,7 +16,7 @@
 
 <body>
     <!--! please login card -->
-    <section class="login_required_card">
+    <section class="login_required_card" id="login_required_popup">
         <div><i class="fa-solid fa-circle-info"></i></div>
         <div>
             <p>Please sign-in to your Account to save items for later.</p>
@@ -28,7 +28,6 @@
         <div id="remove_login_required_card">
             <i class="fa-solid fa-xmark"></i>
         </div>
-
     </section>
     <!-- ------------------ Header section ------------------ -->
     <section class="nav_container">
@@ -36,7 +35,7 @@
             <div class="offer_section">
                 <div class="offer_section_container">
                     <div>SIGN UP FOR 20% OFF</div>
-                    <a href=".">
+                    <a id="user_account">
                         <span id="nav_username">My Account</span>
                         <i class="fa-solid fa-user"></i>
                     </a>
@@ -437,9 +436,9 @@
                         </ul>
                     </div>
                     <div class="nav_rightSection">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <i class="fa-solid fa-magnifying-glass" id="search"></i>
+                        <i class="fa-regular fa-heart" id="wishlist_icon"></i>
+                        <i class="fa-solid fa-cart-shopping" id="cart_icon"></i>
                     </div>
                 </div>
             </div>
@@ -464,7 +463,7 @@
     <section class="carousel">
         <h1>NEW ARRIVALS</h1>
         <div>
-            <i class="fa-solid fa-chevron-left"></i>
+            <i class="fa-solid fa-chevron-left" id="prev_slide"></i>
             <div class="carousel_container">
                 <div class="carousel_track">
                     <!-- ----- product card ---- -->
@@ -737,27 +736,9 @@
                             <div class="blue"></div>
                         </div>
                     </div>
-                    <!-- ----- product card ---- -->
-                    <div class="product_card">
-                        <div>
-                            <span><i class="fa-regular fa-heart"></i></span>
-                            <span>NEW</span>
-                        </div>
-                        <img src="./resource/homepage/147.jpg" alt="product">
-                        <span>Bayaband Army Green Toddlers Clogs</span>
-                        <div class="product_card_price">
-                            <span>₹1,971</span> to <span>₹2,995</span>
-                        </div>
-                        <div class="product_card_colors">
-                            <div class="black"></div>
-                            <div class="white"></div>
-                            <div class="grey"></div>
-                            <div class="green"></div>
-                        </div>
-                    </div>
                 </div>
             </div>
-            <i class="fa-solid fa-chevron-right"></i>
+            <i class="fa-solid fa-chevron-right" id="next_slide"></i>
         </div>
     </section>
     <section class="bottom_banners">
@@ -1031,4 +1012,5 @@
     </section>
 </body>
 <script src="./scripts/index.js"></script>
+<script src="./scripts/navbar.js"></script>
 </html>
