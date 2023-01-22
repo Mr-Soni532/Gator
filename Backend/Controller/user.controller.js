@@ -5,7 +5,7 @@ require('dotenv').config();
 const JWT_SECRET = process.env.JWT_SECRET;
 
 exports.register = async (req, res) => {
-    const { email, password, gender, name } = req.body;
+    const { email, password, number, name } = req.body;
     try {
         const user = await UserModel.find({ email });
         if (user.length) {
@@ -13,7 +13,7 @@ exports.register = async (req, res) => {
         }
         await bcrypt.hash(password, 10, async (err, hash) => {
             if (err) return res.json({ err: err.message });
-            let newUser = new UserModel({ email, password: hash, gender, name });
+            let newUser = new UserModel({ email, password: hash, number, name });
             await newUser.save();
             res.status(201).json({ message: 'User has been created.' });
         })

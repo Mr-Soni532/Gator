@@ -3,6 +3,7 @@ const login_popup = document.querySelector('#login_required_popup')
 //! ----- Headers--------
 // offer section - user account
 let useraccount = document.querySelector('#user_account');
+useraccount
 useraccount.addEventListener('click', () => {
     if (token) {
         // window.location.href = '#'
@@ -42,6 +43,7 @@ username.innerText = localStorage.getItem('username') || 'My Account';
 let like_btns = document.querySelectorAll('.fa-heart')
 like_btns.forEach(el => {
     el.addEventListener('click', () => {
+        console.log('yes')
         if (token) {
             if (el.classList.contains('fa-regular')) {
                 el.classList.remove('fa-regular')

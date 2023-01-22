@@ -13,7 +13,7 @@ const userShema = mongoose.Schema({
         type: String,
         require: true
     },
-    gender: {
+    number: {
         type: String,
         require: true
     }

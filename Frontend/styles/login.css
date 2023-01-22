@@ -36,6 +36,7 @@
     display: flex;
     align-items: center;
     padding: 10px 10px;
+    cursor: pointer;
 }
 
 .signin_form>div:nth-child(2)>div>img{
@@ -87,6 +88,7 @@ form>div>div>button{
     line-height: 24px;
     padding: 5px 12px;
     border: none;
+    cursor: pointer;
 }
 label{
     padding: 9px 2px;

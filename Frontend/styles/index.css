@@ -36,7 +36,6 @@
 /* -------------- Login required infomation card --------- */
 .login_required_card{
     display: none;
-
     position: fixed;
     z-index: 11;
     background: white;
@@ -330,6 +329,3 @@ sup {
 }
 /* --------- active classes -------- */
 
-.login_required_card_active{
-    display: flex;
-}
