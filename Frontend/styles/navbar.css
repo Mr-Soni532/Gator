@@ -55,6 +55,7 @@ sup{
 
 #nav_username {
     margin-right: 10px;
+    text-transform: uppercase;
 }
 
 .fa-user {
@@ -310,16 +311,6 @@ sup{
     width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* -------- 3rd col ------- */
 .nav_rightSection {
     width: 15%;
@@ -332,3 +323,9 @@ sup{
     margin-left: 30px;
     cursor: pointer;
 }
+
+
+.login_required_card_active{
+    display: flex;
+}
+

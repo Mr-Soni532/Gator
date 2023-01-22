@@ -15,6 +15,7 @@ const authorization = async(req,res,next)=>{
         }
     } catch (error) {
         res.json({error: error.message});
+        console.log(error)
     }
 }
 module.exports = authorization;

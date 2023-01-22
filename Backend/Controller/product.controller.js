@@ -3,7 +3,27 @@ const ProductModel = require("../Model/product.model")
 exports.fetchProduct = async (req, res) => {
     let page = +req.query.page || 1;
     try {
-        const user = await ProductModel.find().skip((page-1)*20).limit(20);
+        const user = await ProductModel.find({tag: req.params.tag}).skip((page-1)*20).limit(20);
+        res.send(user);
+    } catch (error) {
+        res.status(500).json({ error: error.message })
+        console.log(error)
+    }
+}
+exports.fetch_LTH = async (req, res) => {
+    let page = +req.query.page || 1;
+    try {
+        const user = await ProductModel.find({tag: req.params.tag}).skip((page-1)*20).limit(20).sort({range_start: -1});
+        res.send(user);
+    } catch (error) {
+        res.status(500).json({ error: error.message })
+        console.log(error)
+    }
+}
+exports.fetch_HTL = async (req, res) => {
+    let page = +req.query.page || 1;
+    try {
+        const user = await ProductModel.find({tag: req.params.tag}).skip((page-1)*20).limit(20).sort({ range_start: 1});
         res.send(user);
     } catch (error) {
         res.status(500).json({ error: error.message })

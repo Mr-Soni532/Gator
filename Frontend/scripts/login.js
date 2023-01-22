@@ -18,6 +18,7 @@ form.addEventListener('submit', (e)=>{
                 email, name, number
             }
             localStorage.setItem('userDetails', JSON.stringify(obj))
+            window.location.href = '../html/accout.html'
         })
     })
 })
