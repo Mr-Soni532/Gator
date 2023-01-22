@@ -35,14 +35,15 @@
 
 /* -------------- Login required infomation card --------- */
 .login_required_card{
-    display: inline-block;
+    display: none;
+
     position: fixed;
     z-index: 11;
     background: white;
     bottom: 0;
     right: 0;
     margin: 20px;
-    display: flex;
+    /* display: flex; */
     padding: 20px 10px 20px 10px;
     border-bottom: #97c24e 5px solid;
 }
@@ -115,12 +116,14 @@ sup {
 .carousel_container {
     width: 90%;
     margin: 0 20px;
-    overflow-x: scroll;
+    overflow-x: hidden;
+    /* border: 1px solid red; */
 }
 
 .carousel_track {
     display: flex;
-    gap: 15px;
+    gap: 8px;
+    transition-duration: 500ms;
 }
 
 .product_card {
@@ -145,7 +148,9 @@ sup {
     opacity: 0.2;
     cursor: pointer;
 }
-
+.fa-solid.fa-heart{
+    color: #97c24e;
+}
 .product_card>div:nth-child(1)>span:nth-child(2) {
     color: #046ca3;
     font-size: 17px;
@@ -322,4 +327,9 @@ sup {
 .big_product_cards>div{
     background: #f5f5f5;
     padding: 10px;
+}
+/* --------- active classes -------- */
+
+.login_required_card_active{
+    display: flex;
 }
