@@ -15,7 +15,7 @@ form.addEventListener('submit', (e)=>{
             if(result){
                 window.location.href = "../html/login.html"
             } else {
-                alert('Input Valid Details')
+                alert('User Already Exsist!')
             }
         })
     } else {

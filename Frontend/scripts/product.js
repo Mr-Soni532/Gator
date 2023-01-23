@@ -1,4 +1,4 @@
-import { fetchProduct, fetch_HTL, fetch_LTH, pagination_fetch, wishlist_add, wishlist_delete } from "./Api_Operations.js";
+import { fetchProduct, fetch_HTL, fetch_LTH, pagination_fetch, wishlist_add } from "./Api_Operations.js";
 const user_tag = document.querySelector('#page_title').innerText.toLowerCase();
 const token = localStorage.getItem('token');
 const login_popup = document.querySelector('#login_required_popup')
@@ -44,7 +44,7 @@ cart_icon.addEventListener('click', () => {
 //--------- username
 
 let username = document.querySelector('#nav_username');
-username.innerText = localStorage.getItem('username') || 'My Account';
+username.innerText = JSON.parse(localStorage.getItem('userDetails')).name.toUpperCase() || 'My Account';
 
 //--------- product_like icon 
 
@@ -191,7 +191,7 @@ function displayProduct(data){
                                 id="price_end">${el.range_end}</span></span>
                     </div>
                     <div class="product_card_price fixed_price ${el.price?'fixed_price_active':""}">
-                        <span>₹<span id="fixed_price">1,971</span></span>
+                        <span>₹<span id="fixed_price">${el.price}</span></span>
                     </div>
                 </div>
         `

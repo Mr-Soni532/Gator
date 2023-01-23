@@ -1,4 +1,5 @@
 const host = 'http://localhost:3500'
+// const host = 'https://busy-lime-tortoise-hem.cyclic.app'
 
 //! Fetching products with tag using : GET
 async function fetchProduct(tag){
@@ -169,7 +170,75 @@ async function wishlist_add(id){
 }
 //* Fetching wishlist products : DELETE 
 async function wishlist_delete(id){
-    let res = await fetch(`${host}/api/wishlist/delete/${id}`, {
+    let res = await fetch(`${host}/api/wishlist/delete/${id}`,{
+        method: "DELETE",
+        headers: {
+            'Content-Type': 'application/json',
+            'authorization': localStorage.getItem('token')
+        }
+    })
+    if(res.ok){
+        let data = await res.json();
+        return data;
+    } else {
+        return 'something went wrong.'
+    }
+}
+
+//! --------------------- Cart : LOGIN REQUIRED
+//* Fetching wishlist products : GET 
+async function cart_fetch(){
+    let res = await fetch(`${host}/api/cart/fetch`, {
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json',
+            'authorization': localStorage.getItem('token')
+        }
+    })
+    if(res.ok){
+        let data = await res.json();
+        return data;
+    } else {
+        return 'something went wrong.'
+    }
+}
+
+//* Fetch cart products by ID : POST 
+async function cart_fetchById(id){
+    let res = await fetch(`${host}/api/cart/fetchbyid/${id}`, {
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json',
+            'authorization': localStorage.getItem('token')
+        }
+    })
+    if(res.ok){
+        let data = await res.json();
+        return data;
+    } else {
+        return 'something went wrong.'
+    }
+}
+
+//* Add cart products : POST 
+async function cart_add(id){
+    let data = await cart_fetchById(id)
+    let res = await fetch(`${host}/api/cart/add`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+            'authorization': localStorage.getItem('token')
+        }, body: JSON.stringify(data)
+    })
+    if(res.ok){
+        return true;
+    } else {
+        return false;
+    }
+}
+//* Fetching cart products : DELETE 
+async function cart_delete(id){
+    let res = await fetch(`${host}/api/cart/delete/${id}`,{
         method: "DELETE",
         headers: {
             'Content-Type': 'application/json',
@@ -185,6 +254,5 @@ async function wishlist_delete(id){
 }
 
 
-
-export{userLogin, userRegister, fetchProduct, fetchUser, pagination_fetch, fetch_LTH, fetch_HTL,wishlist_add,wishlist_fetch,wishlist_delete}
+export{userLogin, userRegister, fetchProduct, fetchUser, pagination_fetch, fetch_LTH, fetch_HTL,wishlist_add,wishlist_fetch,wishlist_delete, cart_fetch, cart_add, cart_delete}
 // export = userLogin;

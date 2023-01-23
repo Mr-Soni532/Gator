@@ -37,7 +37,11 @@ cart_icon.addEventListener('click', () => {
 
 //--------- username
 let username = document.querySelector('#nav_username');
-username.innerText = localStorage.getItem('username') || 'My Account';
+if(token){
+    username.innerText = JSON.parse(localStorage.getItem('userDetails')).name.toUpperCase();
+} else {
+    username.innerText = 'My Account'
+}
 
 //--------- wishlist 
 let like_btns = document.querySelectorAll('.fa-heart')

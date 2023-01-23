@@ -5,6 +5,7 @@
     font-family: 'Nunito Sans', sans-serif;
 }
 
+
 .account_main{
     width: 100%;
 }
@@ -65,7 +66,7 @@
     font-size: 13px;
 }
 /* -------------------------------------- */
-#profile{
+#wishlist_card{
     background: #97c24e;
 }
 
@@ -84,16 +85,57 @@
 .account_header-3>div>h1>span{
     color: #7f878d;
 }
-/* ------------ */
-.account_details{
+.wishlist_container{
+    padding: 16px;
+    background: #ebebeb;
+    color: #172026;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    position: relative;
+}
+
+.wishlist_card{
+    position: relative;
+    background: white;
+    padding: 10px;
+}
+.wishlist_card>i{
+    float: right;
+}
+.wishlist_card>div:nth-child(2)>p{
+   
+}
+.wishlist_card>div>img{
     width: 100%;
 }
-.account_details>div{
-    border-bottom: #7f878d 1px solid;
-    padding-bottom: 5px;
-    margin-bottom: 30px;
+.wishlist_card>div>span{
+    font-weight: 700;
 }
-.account_details>div>h2{
-    font-size: 17px;
-    margin-top: 10px;
+.product_card_price {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 20px;
 }
+.range_price{
+    display: none;
+}
+.range_price_active{
+    display: block;
+}
+.fixed_price{
+    display: none;
+}
+.fixed_price_active{
+    display: block;
+}
+.wishlist_card>button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 5px 10px;
+    color: white;
+    background: #046ca3;
+    border: none;
+    cursor: pointer;
+}
+/* ------------ */

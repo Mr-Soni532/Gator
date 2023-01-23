@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - GATOR™ India</title>
-    <link rel="stylesheet" href="../styles/checkout.css">
-    <link rel="shortcut icon" href="../resource/gator_title_logo-2.png" type="image/x-icon">
+    <title>Wishlist - GATOR™ India</title>
     <link rel="stylesheet" href="../styles/navbar.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/wishlist.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link rel="shortcut icon" href="../resource/gator_title_logo-2.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/ff75adb155.js" crossorigin="anonymous"></script>
 </head>
 
@@ -426,70 +426,84 @@
                         <i class="fa-solid fa-magnifying-glass" id="search"></i>
                         <i class="fa-regular fa-heart" id="wishlist_icon"></i>
                         <i class="fa-solid fa-cart-shopping" id="cart_icon"></i>
-                    </div>
+                    </div>`
                 </div>
             </div>
         </div>
     </section>
-
     <!-- ------------------ Main section ------------------ -->
-    <section class="checkout_main">
-        <div class="checkout_container">
-            <div class="address_form_section">
-                <h1>WELCOME <span id="username">user</span></h1>
-                <h2>ADDRESS DETAILS</h2>
-                <p>This shipping address you enter will saved to your address book and set your default future purchase.
-                </p>
-                <form action="">
-                    <label for="">Email</label>
-                    <input type="email" placeholder="Enter your email" id="email">
+    <section class="account_main">
+        <div class="account_container">
+            <div class="account_header">
+                <!-- welcome user -->
+                <div class="account_header-1">
                     <div>
-                        <span>
-                            <label for="">First Name</label>
-                            <input type="text" placeholder="Enter your First Name" id="firstname">
-                        </span>
-                        <span>
-                            <label for="">Last Name</label>
-                            <input type="text" placeholder="Enter your Last Name" id="lastname">
-                        </span>
+                        Welcome
+                        <span id="username">##username##</span>
                     </div>
-                    <label for="">Country</label>
-                    <input type="text" placeholder="Enter your country" id="country">
-                    <label for="">Street Address</label>
-                    <input type="text" placeholder="Enter your address" id="address">
-                    <label for="">State</label>
-                    <input type="text" placeholder="Enter your state" id="state">
-                    <label for="">ZIP/Postal Code</label>
-                    <input type="text" placeholder="" id="zip_code">
-                    <label for="">Phone Number</label>
-                    <input type="number" placeholder="" id="phone">
-                    <input type="submit" value="SAVE AND CONTINUE">
-                </form>
-            </div>
-            <div class="product_details_section">
-                <div class="pds_container">
-                    <div class="order_summary">
-                        <div class="order_summary_container">
-                            <h2>Order Summary</h2>
-                            <div>
-                                <span>
-                                    <span>Subtotal</span>
-                                    <span>₹<span id="subtotal">0</span></span>
-                                </span>
-                                <span>
-                                    <h3>Estimated Total</h3>
-                                    <h3>₹<span id="etotal">0</span></h3>
-                                </span>
-                            </div>
-                            <p>Or 3 interest free payments of INR 2590.33 + 10% cashback up to INR 500 on minimum purchase of
-                                INR 2995 with simpl T&C</p>
+                    <a id="signout">Sign Out</a>
+                </div>
+                <!-- navigation icons -->
+                <div class="account_header-2">
+                    <div>
+                        <div id="profile">
+                            <img src="../resource/icons/user.svg" alt="user">
                         </div>
+                        <span>My Profile</span>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="../resource/icons/box.svg" alt="user">
+                        </div>
+                        <span>My Orders</span>
+                    </div>
+                    <div>
+                        <div id="wishlist_card">
+                            <img src="../resource/icons/heart.svg" alt="user">
+                        </div>
+                        <span>My Wishlist</span>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="../resource/icons/return.svg" alt="user">
+                        </div>
+                        <span>Return Request</span>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="../resource/icons/agenda-iV4.svg" alt="user">
+                        </div>
+                        <span>Saved Addresses</span>
+                    </div>
+                </div>
+                <div class="account_header-3">
+                    
+                    <div>
+                        <h1>WISH LIST</h1>
+                        <h1>Item: <span id="item_count">##</span></h1>
+                    </div>
+                    <div class="wishlist_container">
+                        <!-- <div class="wishlist_card">
+                            <i class="fa-solid fa-circle-xmark" id="removeItem"></i>
+                            <div>
+                                <img src="../resource/homepage/148.jpg" alt="">
+                            </div>
+                            <div>
+                                <p id="product_title">title - 26</p>
+                                <div class="product_card_price range_price">
+                                    <span>₹<span id="price_start">1,971</span></span>
+                                </div>
+                                <div class="product_card_price fixed_price">
+                                    <span>₹<span id="fixed_price">1,971</span></span>
+                                </div>
+                            </div>
+                            <button id="addtocart">ADD TO CART</button>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- ------------------ Footer section ------------------ -->
     <section class="footer">
         <div class="footer_top-section">
@@ -588,6 +602,6 @@
         </div>
     </section>
 </body>
-    <script src="../scripts/checkout.js" type="module"></script>
-    <script src="../scripts/navbar.js"></script>
+<script src="../scripts/wishlist.js" type="module"></script>
+<script src="../scripts/navbar.js"></script>
 </html>
