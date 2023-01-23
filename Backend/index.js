@@ -14,7 +14,7 @@ app.use(cors())
 
 app.use('/api/user', userRouter)
 app.use('/api/product', productRouter)
-app.use('/api/cartpage', cartRouter)
+app.use('/api/cart', cartRouter)
 app.use('/api/wishlist', wishlistRouter)
 
 app.get('/', (req,res)=>{

@@ -1,4 +1,5 @@
-const CartModel = require("../Model/cart.model")
+const CartModel = require("../Model/cart.model");
+const ProductModel = require("../Model/product.model");
 exports.fetchProduct = async (req,res)=>{
     try {
         const user = await CartModel.find({userId: req.userID});
@@ -8,9 +9,17 @@ exports.fetchProduct = async (req,res)=>{
         console.log(error)
     }
 }
-
+exports.fetchProduct_byId = async (req,res)=>{
+    try {
+        const user = await ProductModel.findById(req.params.id);
+        res.send(user);
+    } catch (error) {
+        res.status(500).json({error: error.message})
+        console.log(error)
+    }
+}
 exports.addProduct = async (req,res)=>{
-    const newProduct = req.body;
+    let newProduct = req.body;
     try {
         newProduct.userId = req.userID;
         newProduct = new CartModel(req.body);
