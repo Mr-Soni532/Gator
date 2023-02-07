@@ -61,7 +61,7 @@ function displayCartItem(data) {
         decrease_count()
         increase_count()
         update_total_price()
-    }, 500);
+    }, 1000);
 }
 fetch()
 

@@ -1,7 +1,7 @@
 import { active_loading, disable_loading } from "./navbar.js";
 
-const host = 'http://localhost:5000'
-// const host = 'https://busy-lime-tortoise-hem.cyclic.app'
+// const host = 'http://localhost:5000'
+const host = 'https://determined-eel-wear.cyclic.app'
 //! Fetching products with tag using : GET
 async function fetchProduct(tag) {
     active_loading()
@@ -175,7 +175,7 @@ async function wishlist_fetch() {
         return data;
     } else {
         disable_loading()
-        return 'something went wrong.'
+        console.log('something went wrong.')
     }
 }
 
@@ -189,6 +189,7 @@ async function wishlist_add(id) {
             'authorization': localStorage.getItem('token')
         }, body: JSON.stringify(data)
     })
+    console.log(data)
     if (res.ok) {
         return true;
     } else {
@@ -211,7 +212,7 @@ async function wishlist_delete(id) {
         return data;
     } else {
         disable_loading()
-        return 'something went wrong.'
+        console.log('something went wrong.')
     }
 }
 
