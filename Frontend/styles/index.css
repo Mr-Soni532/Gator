@@ -1,4 +1,3 @@
-
 * {
     padding: 0;
     margin: 0;
@@ -34,7 +33,7 @@
 }
 
 /* -------------- Login required infomation card --------- */
-.login_required_card{
+.login_required_card {
     display: none;
     position: fixed;
     z-index: 11;
@@ -46,25 +45,30 @@
     padding: 20px 10px 20px 10px;
     border-bottom: #97c24e 5px solid;
 }
-.login_required_card>div:nth-child(1){
-width: 5%;
+
+.login_required_card>div:nth-child(1) {
+    width: 5%;
 }
-.login_required_card>div:nth-child(2){
+
+.login_required_card>div:nth-child(2) {
     flex-grow: 1;
     font-size: 14px;
     margin-left: 10px;
 }
-.login_required_card>div:nth-child(2)>p{
+
+.login_required_card>div:nth-child(2)>p {
     margin-bottom: 10px;
     font-weight: 700;
 }
-.login_required_card>div:nth-child(2)>div>a{
+
+.login_required_card>div:nth-child(2)>div>a {
     font-size: 13px;
     padding-right: 20px;
     cursor: pointer;
     column-rule: #172026;
 }
-.login_required_card>div:nth-child(3){
+
+.login_required_card>div:nth-child(3) {
     width: 5%;
     cursor: pointer;
 }
@@ -147,9 +151,11 @@ sup {
     opacity: 0.2;
     cursor: pointer;
 }
-.fa-solid.fa-heart{
+
+.fa-solid.fa-heart {
     color: #97c24e;
 }
+
 .product_card>div:nth-child(1)>span:nth-child(2) {
     color: #046ca3;
     font-size: 17px;
@@ -279,34 +285,42 @@ sup {
     right: 0;
     top: 0;
 }
-.banner_cards{
+
+.banner_cards {
     width: 100%;
 }
-.banner_cards>div:nth-child(1){
+
+.banner_cards>div:nth-child(1) {
     display: flex;
     gap: 2.5px;
 }
-.banner_cards>div:nth-child(1)>div{
+
+.banner_cards>div:nth-child(1)>div {
     width: 25%;
 }
-.banner_cards>div:nth-child(1)>div>img{
+
+.banner_cards>div:nth-child(1)>div>img {
     width: 100%;
 }
-.banner_cards>h1{
+
+.banner_cards>h1 {
     font-size: 20px;
     padding: 10px;
 }
-.banner_cards>.product_section{
+
+.banner_cards>.product_section {
     background: #f5f5f5;
     display: flex;
     padding: 10px 20px;
     margin-top: 10px;
     gap: 10px;
 }
-.banner_cards>.product_section>div{
+
+.banner_cards>.product_section>div {
     width: 20%;
 }
-.shop_by_style{
+
+.shop_by_style {
     width: fit-content;
     margin: auto;
     font-size: 40px;
@@ -318,14 +332,14 @@ sup {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.big_product_cards{
+
+.big_product_cards {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
-.big_product_cards>div{
+
+.big_product_cards>div {
     background: #f5f5f5;
     padding: 10px;
 }
-/* --------- active classes -------- */
-

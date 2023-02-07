@@ -2,7 +2,7 @@
 const token = localStorage.getItem('token')
 let username = document.querySelector('#username');
 const userDetails = JSON.parse(localStorage.getItem('userDetails'));
-username.innerText = userDetails.name.toUpperCase() || 'My Account';
+username.innerText = userDetails?.name?.toUpperCase() || 'My Account';
 
 let signout = document.querySelector('#signout')
 signout.addEventListener('click', () => {
@@ -35,6 +35,6 @@ wishlist_card.addEventListener('click', ()=>{
 })
 
 //-------------------------
-document.querySelector('#account_email').innerText = userDetails.email;
-document.querySelector('#account_name').innerText = userDetails.name.toUpperCase();
-document.querySelector('#account_mobile').innerText = userDetails.number;
+document.querySelector('#account_email').innerText = userDetails?.email;
+document.querySelector('#account_name').innerText = userDetails?.name?.toUpperCase();
+document.querySelector('#account_mobile').innerText = userDetails?.number;

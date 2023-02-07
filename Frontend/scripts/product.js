@@ -44,7 +44,7 @@ cart_icon.addEventListener('click', () => {
 //--------- username
 
 let username = document.querySelector('#nav_username');
-username.innerText = JSON.parse(localStorage.getItem('userDetails')).name.toUpperCase() || 'My Account';
+username.innerText = JSON.parse(localStorage.getItem('userDetails'))?.name.toUpperCase() || 'My Account';
 
 //--------- product_like icon 
 
@@ -182,7 +182,7 @@ function displayProduct(data){
         <div class="product_card" id="${el._id}">
                     <div>
                         <span><i class="fa-regular fa-heart"></i></span>
-                        <span id="new_tag">${el.new}</span>
+                        <span id="new_tag">${el.new ? el.new : ""}</span>
                     </div>
                     <img src=${el.img} alt="product" id="product_img">
                     <span id="product_title">${el.title}</span>

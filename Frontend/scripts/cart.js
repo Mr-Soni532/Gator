@@ -97,13 +97,14 @@ function update_total_price(){
 function decrease_count(){
     const sub_btns = document.querySelectorAll('#subtract_btn');
     sub_btns.forEach(el => {
-        el.addEventListener('click', ()=>{
-            let item_price = document.querySelector('#item_price')
-            let price = +document.querySelector('#item_price').innerText.split(",").join("");
+        el.addEventListener('click', (e)=>{
+            let item_price= e.target.parentElement.parentElement.parentElement.nextElementSibling.children[1].children[0]
+            let price = +item_price.innerText.split(",").join("");
             let quantity = el.nextSibling.nextSibling;
             let count = +el.nextSibling.nextSibling.innerText;
-            quantity.innerText = count-1;
-            item_price.innerText = price- (price/count)
+            quantity.innerText = count-1 <= 0 ? 1 : count-1;
+            if(count<=1) count = 0;
+            item_price.innerText = price- Math.floor((price/count)==Infinity? 0 : (price/count))
             update_total_price()
         })
     })
@@ -113,14 +114,14 @@ function decrease_count(){
 function increase_count(){
     const sub_btns = document.querySelectorAll('#add_btn');
     sub_btns.forEach(el => {
-        el.addEventListener('click', ()=>{
-           let item_price = document.querySelector('#item_price')
-           let price = +document.querySelector('#item_price').innerText.split(",").join("");
+        el.addEventListener('click', (e)=>{
+            let item_price= e.target.parentElement.parentElement.parentElement.nextElementSibling.children[1].children[0]
+           let price = +item_price.innerText.split(",").join("");
             let quantity = el.previousSibling.previousSibling;
             let count = +el.previousSibling.previousSibling.innerText;
             quantity.innerText = count+1;
           
-            item_price.innerText = price+ (price/count)
+            item_price.innerText = price+ Math.floor(price/count)
             update_total_price()
         })
     })

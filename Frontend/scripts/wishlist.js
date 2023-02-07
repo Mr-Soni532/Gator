@@ -41,8 +41,10 @@ function remove_wishlist_item() {
 function add_wishlist_item_toCart() {
     const addToCart_btns = document.querySelectorAll('#addtocart');
     addToCart_btns.forEach(el => {
-        el.addEventListener('click', () => {
+        el.addEventListener('click', (e) => {
             let ID = el.parentElement.id;
+            e.target.innerText = "ADDED TO CART"
+            // console.log(addToCart_btns)
             cart_add(ID);
         })
     })
