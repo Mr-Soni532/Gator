@@ -63,9 +63,10 @@ function displayCartItem(data) {
         update_total_price()
     }, 1000);
 }
+
 fetch()
 
- function fetch(){
+function fetch(){
     let res =  cart_fetch();
     displayCartItem(res)
 }
@@ -109,7 +110,6 @@ function decrease_count(){
         })
     })
 }
-
 
 function increase_count(){
     const sub_btns = document.querySelectorAll('#add_btn');

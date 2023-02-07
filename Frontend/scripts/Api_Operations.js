@@ -276,7 +276,18 @@ async function cart_delete(id) {
         return 'something went wrong.'
     }
 }
+//* Delete cart products : DELETE ALL
+async function cart_deleteAll() {
+    active_loading()
+    await fetch(`${host}/api/cart/deleteAll`, {
+        method: "DELETE",
+        headers: {
+            'Content-Type': 'application/json',
+            'authorization': localStorage.getItem('token')
+        }
+    })
+}
 
 
-export { userLogin, userRegister, fetchProduct, fetchUser, pagination_fetch, fetch_LTH, fetch_HTL, wishlist_add, wishlist_fetch, wishlist_delete, cart_fetch, cart_add, cart_delete }
+export { userLogin, userRegister, fetchProduct, fetchUser, pagination_fetch, fetch_LTH, fetch_HTL, wishlist_add, wishlist_fetch, wishlist_delete, cart_fetch, cart_add, cart_delete,cart_deleteAll }
 // export = userLogin;
